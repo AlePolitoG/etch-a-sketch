@@ -11,12 +11,20 @@
     <div id="header">
       <h1>ETCH A SKETCH!</h1>
     </div>
-    <div class="inputs">
-      <input id="color" class="tex" type="text" placeholder="color" />
-      <input id="size" class="tex" type="text" placeholder="size" />
-      <button id="rainbow">Rainbow</button>
-      <button id="clear">Clear</button>
+    <div class="game">
+      <div class="inputs">
+        <div id="color">
+          <input class="tex" type="color" placeholder="color" />
+          <p>Color</p>
+        </div>
+        <button id="rainbow">Rainbow</button>
+        <button id="clear">Clear</button>
+        <div id="sizeFather">
+          <input id="size" class="tex" type="range" placeholder="size" />
+          <p>Size</p>
+        </div>
+      </div>
+      <div id="father"></div>
     </div>
-    <div id="father"></div>
   </body>
 </html>
