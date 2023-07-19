@@ -1,8 +1,11 @@
 let container = document.getElementById("father");
-
-let squareSize = 16;
+const colors = document.getElementById("input-color");
+const size = document.getElementById("size");
+const apply = document.getElementById("apply");
+const clear = document.getElementById("clear");
 
 function createDiv() {
+  let squareSize = size.value;
   for (i = 0; i < squareSize * squareSize; i++) {
     const content = document.createElement("div");
     content.classList.add("content");
@@ -12,25 +15,36 @@ function createDiv() {
     container.appendChild(content);
   }
 }
+
 createDiv();
-
-const colors = document.getElementById("color");
-const size = document.getAnimations("size");
-const rainbow = document.getElementById("rainbow");
-const clear = document.getElementById("clear");
-
-let color = "blue";
 
 container.addEventListener("mouseover", (event) => {
   const element = event.target;
+  let color = colors.value;
   element.style.backgroundColor = color;
 });
 
-let idAllDiv = document.querySelectorAll("#background");
-let arrIdAllDiv = Array.from(idAllDiv);
-
 clear.addEventListener("click", () => {
+  let idAllDiv = document.querySelectorAll("#background");
+  let arrIdAllDiv = Array.from(idAllDiv);
+
   arrIdAllDiv.forEach((element) => {
-    element.style.backgroundColor = "white";
+    container.removeChild(container.lastChild);
   });
+  createDiv();
+});
+
+// function apply_changes() {
+//   arrIdAllDiv.forEach((element) => {
+//     container.removeChild(container.lastChild);
+//   });
+// }
+
+apply.addEventListener("click", () => {
+  let idAllDiv = document.querySelectorAll("#background");
+  let arrIdAllDiv = Array.from(idAllDiv);
+  arrIdAllDiv.forEach((element) => {
+    container.removeChild(container.lastChild);
+  });
+  createDiv();
 });

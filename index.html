@@ -14,15 +14,27 @@
     <div class="game">
       <div class="inputs">
         <div id="color">
-          <input class="tex" type="color" placeholder="color" />
+          <input
+            id="input-color"
+            class="tex"
+            type="color"
+            placeholder="color"
+            value="#a5e2ee"
+          />
           <p>Color</p>
         </div>
-        <button id="rainbow">Rainbow</button>
         <button id="clear">Clear</button>
         <div id="sizeFather">
-          <input id="size" class="tex" type="range" placeholder="size" />
+          <input
+            id="size"
+            class="tex"
+            type="range"
+            placeholder="size"
+            value="16"
+          />
           <p>Size</p>
         </div>
+        <button id="apply">Apply</button>
       </div>
       <div id="father"></div>
     </div>

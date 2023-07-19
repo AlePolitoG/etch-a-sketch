@@ -34,7 +34,7 @@ button {
 
 div.inputs {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-direction: column;
   justify-content: space-around;
 }
